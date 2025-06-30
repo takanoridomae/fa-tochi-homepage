@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netlify Forms Detection</title>
+</head>
+<body>
+    <!-- Netlify Forms検出用の隠しフォーム -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="bot-field" />
+        <input type="text" name="lastName" />
+        <input type="text" name="firstName" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="serviceType">
+            <option value="通常洗浄">通常洗浄</option>
+            <option value="全分解洗浄">全分解洗浄</option>
+            <option value="背抜洗浄">背抜洗浄</option>
+        </select>
+        <input type="text" name="address" />
+        <select name="airconCount">
+            <option value="1台">1台</option>
+            <option value="2台">2台</option>
+        </select>
+        <input type="datetime-local" name="preferredDate" />
+        <textarea name="message"></textarea>
+        <input type="checkbox" name="privacy" />
+    </form>
+</body>
+</html> 

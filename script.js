@@ -177,20 +177,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // バリデーションが成功した場合、ローディング状態にしてNetlifyに送信を委ねる
+        // バリデーション成功時はNetlifyに処理を委ねる
+        // preventDefault()は呼ばずにフォームの自然な送信を許可
         const submitBtn = document.getElementById('submitBtn');
         const btnText = submitBtn.querySelector('.btn-text');
         const btnLoading = submitBtn.querySelector('.btn-loading');
 
-        // ローディング状態
+        // ローディング状態（視覚的フィードバック）
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline-block';
-
-        // Netlify Formsがフォームを自動処理するため、preventDefault()は呼ばない
-        // 送信後はNetlifyが自動的に成功ページにリダイレクトするか、
-        // 同じページに戻って成功メッセージを表示する
     });
 
     // リセットボタンの処理
