@@ -775,14 +775,55 @@ body {
 
 .contact-method {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-method i {
     color: #2c5aa0;
     font-size: 1.2rem;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.contact-method div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.phone-number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.phone-number:hover {
+    color: #1a4480;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+
+.business-hours {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.contact-desc {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .contact-form {
